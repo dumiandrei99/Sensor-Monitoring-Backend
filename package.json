@@ -1,0 +1,39 @@
+{
+  "name": "ds_2021_dumitrescu_andrei",
+  "version": "1.0.0",
+  "description": "Online platform for customers / smart devices / energy consumption sensors and data",
+  "engines": {
+    "node": "14.18.0"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/ds2021_30642_dumitrescu_andrei/ds2021_30642_dumitrescu_andrei_1_backend.git"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "jest",
+    "dev": "nodemon app.js"
+  },
+  "author": "Dumitrescu Andrei",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "canvas": "^2.8.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-ws": "^5.0.2",
+    "jest": "^27.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "ng": "0.0.0",
+    "node-notifier": "^10.0.0",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.7.0",
+    "ts-node": "^10.4.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.4.1",
+    "nodemon": "^2.0.13"
+  }
+}

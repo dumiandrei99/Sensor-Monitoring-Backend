@@ -1,0 +1,2 @@
+The URL was too long to be included in the CV.
+The full git history can be seen on gitlab, here: https://gitlab.com/ds2021_30642_dumitrescu_andrei/ds2021_30642_dumitrescu_andrei_1_backend

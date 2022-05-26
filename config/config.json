@@ -1,0 +1,33 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "Deedee112",
+    "database": "ds_2021",
+    "host": "127.0.0.1",
+    "port": 5433,
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "Deedee112",
+    "database": "ds_2021",
+    "host": "postgres",
+    "port": 5432,
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "stgamzwyzuwxyv",
+    "password": "7f5ccd0f68f2bb8869d8253c1ee36db8675d78093ba8817dc7f86e797cca797a",
+    "database": "d7flivargo05rd",
+    "host": "ec2-63-34-223-144.eu-west-1.compute.amazonaws.com",
+    "port": 5432,
+    "dialect": "postgres",
+    "dialectOptions":{
+      "ssl":{
+        "require": true,
+        "rejectUnauthorized": false
+      } 
+    }
+  }
+  
+}

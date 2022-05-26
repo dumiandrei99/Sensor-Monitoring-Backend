@@ -1,0 +1,44 @@
+services:
+  - postgres:12.2-alpine
+
+stages:
+  - build
+  - test
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+variables:
+  DB_IP: ec2-63-34-223-144.eu-west-1.compute.amazonaws.com
+  DB_PORT: 5432
+  DB_USER: stgamzwyzuwxyv
+  DB_PASSWORD: 7f5ccd0f68f2bb8869d8253c1ee36db8675d78093ba8817dc7f86e797cca797a
+  DB_DBNAME: d7flivargo05rd
+
+build:
+  stage: build
+  image: node:11
+  script:
+    - npm install --progress=false
+    - npm config set user 0
+    - npm config set unsafe-perm true
+  artifacts:
+    paths:
+      - node_modules/
+  
+test:
+  stage: test
+  image: node:11
+  script: npm test
+
+deploy:
+  stage: deploy
+  image: ruby:2.4
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=ds-backend-dumitrescu-andrei --api-key=$HEROKU_API_KEY
+
